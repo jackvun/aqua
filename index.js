@@ -385,7 +385,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Latom @${num.split('@')[0]} `
+				teks = `Sayonara :v @${num.split('@')[0]} `
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -482,6 +482,10 @@ client.on('group-participants-update', async (anu) => {
 	        const magw = fs.readFileSync('./src/webp/hai.webp');
             client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
 	        }
+		if (auto.match('wibu')){
+	        const magw = fs.readFileSync('./src/webp/hai.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }
 		if (auto.match('tolol')){
 	        const magw = fs.readFileSync('./src/webp/tolol.webp');
             client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
@@ -516,10 +520,6 @@ client.on('group-participants-update', async (anu) => {
 	        }
 	        if (auto.match('aqua')){
 	        const magw = fs.readFileSync('./src/mp3/nani.mp3');
-            client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-	        }
-		if (auto.match('bot')){
-	        const magw = fs.readFileSync('./src/mp3/aqua.mp3');
             client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	        }
 	        if (auto.match('baka')){
@@ -1255,7 +1255,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `*Name* : ${me.name}\n*User* : ${_registered.length}\n*Developer* : Rafly\n*Operator* : By.u\n*Network Type* : 4.5G\n*Number* : ${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Block Contact* : ${blocked.length}\n*Runtime* : \n${kyun(uptime)}\n\n*Thanks To* : \n-Affis\n-Mroy25\n-Coslow`
+					teks = `*Name* : ${me.name}\n*User* : ${_registered.length}\n*Developer* : Vun\n*Operator* : By Rafly\n*Network Type* : 4.5G\n*Number* : ${me.jid.split('@')[0]}\n*Prefix* : ${prefix}\n*Block Contact* : ${blocked.length}\n*Runtime* : \n${kyun(uptime)}\n\n*Thanks To* : \n-Affis\n-Mroy25\n-Coslow`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -1355,9 +1355,9 @@ client.on('group-participants-update', async (anu) => {
 				const nomerr = args[0].replace('@','')
                 const jmla = args[1]
                 if (jmla <= 1) return reply(`minimum is 1`)
-                if (jmla >= 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999) return reply(`max 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999`)
+                if (jmla >= 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999) return reply(`max 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999`)
                 if (isNaN(jmla)) return reply(`wrong format`)
-                if (!nomerr) return reply(`ex : \n${prefix}giftlimit @tag 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999`)
+                if (!nomerr) return reply(`ex : \n${prefix}giftlimit @tag 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999`)
                 const cysz = nomerr + '@s.whatsapp.net'
                 var found = false
                         Object.keys(_limit).forEach((i) => {
@@ -2506,7 +2506,7 @@ client.on('group-participants-update', async (anu) => {
 				}
                 if (userLevel === undefined && userXp === undefined) return reply(ind.lvlnul())
                 const requiredXp = 5000 * (Math.pow(2, userLevel) - 1)
-                resul = `┏❉ *PROFILE* \n┣⊱ Role : ${role}\n┣⊱ Number : ${sender.split("@")[0]}\n┣⊱ User XP :  \n┣⊱ ${userXp}/${requiredXp}\n┣⊱ User Level : ${userLevel}\n┗⊱  ⸨ *By Koronime* ⸩ `
+                resul = `┏❉ *PROFILE* \n┣⊱ Role : ${role}\n┣⊱ Number : ${sender.split("@")[0]}\n┣⊱ User XP :  \n┣⊱ ${userXp}/${requiredXp}\n┣⊱ User Level : ${userLevel}\n┗⊱  ⸨ *By Minato Aqua~* ⸩ `
                 client.sendMessage(from, ppimg, image, {quoted: mek, caption: resul})
                 .catch(async (err) => {
                         console.error(err)
@@ -2685,13 +2685,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `Latom\n`
+							teks += `Sayonara\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Latom @${mentioned[0].split('@')[0]} `, mentioned, true)
+						mentions(`Sayonara @${mentioned[0].split('@')[0]} `, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
@@ -2704,13 +2704,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `Latom\n`
+							teks += `Sayonara\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`Latom @${mentioned[0].split('@')[0]} `, mentioned, true)
+						mentions(`Sayonara @${mentioned[0].split('@')[0]} `, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
