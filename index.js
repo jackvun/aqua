@@ -474,8 +474,12 @@ client.on('group-participants-update', async (anu) => {
 	        const magw = fs.readFileSync('./src/webp/aqua.webp');
             client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
 	        }
+		if (auto.match('bot')){
+	        const magw = fs.readFileSync('./src/webp/aqua.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }
 	        if (auto.match('@601112272557')){
-           client.sendMessage(from, 'Jangan Tag Owner Gue Njeng,Dia Lagi Sibuk Gblk', text, { quoted: mek })
+           client.sendMessage(from, 'Jangan Tag Owner Gue Njeng, Ngerti gk??? mau gw hantam pala lu? Dia Lagi Sibuk Gblk', text, { quoted: mek })
 		    }
 	       if (auto.match('@6283872453888')){
            client.sendMessage(from, 'Ada apa? Kalo penting pc dia aja :3', text, { quoted: mek })
@@ -486,8 +490,16 @@ client.on('group-participants-update', async (anu) => {
 		if (auto.match('@14156492554')){
            client.sendMessage(from, 'Jangan Tag Harun-sama, Dia lagi mantap mantap cuk :)', text, { quoted: mek })
 		    }   
-		if (auto.match('aqua','bot')){
+		if (auto.match('bot')){
 	        const magw = fs.readFileSync('./src/mp3/aqua.mp3');
+            client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	        }
+		if (auto.match('aqua')){
+	        const magw = fs.readFileSync('./src/mp3/aqu.mp3');
+            client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	        }
+	        if (auto.match('aqua')){
+	        const magw = fs.readFileSync('./src/mp3/nani.mp3');
             client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	        }
 		if (auto.match('bot')){
@@ -546,7 +558,7 @@ client.on('group-participants-update', async (anu) => {
 	        const magw = fs.readFileSync('./src/mp3/siang.mp3');
             client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	        }
-		if (auto.match('stupid','gblk')){
+		if (auto.match('stupid')){
 	        const magw = fs.readFileSync('./src/mp3/okite.mp3');
             client.sendMessage(from, magw, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	        }
@@ -2510,7 +2522,7 @@ client.on('group-participants-update', async (anu) => {
                       addLevelingLevel(sender, 99)
                       reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 10000)
+                      const ngelonte = Math.ceil(Math.random() * 10000)
                       addLevelingXp(sender, ngelonte)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${ngelonte}Xp*`)
                       }
@@ -2525,7 +2537,7 @@ client.on('group-participants-update', async (anu) => {
                       addLevelingLevel(sender, 99)
                       reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 10000)
+                      const maling = Math.ceil(Math.random() * 10000)
                       addLevelingXp(sender, maling)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${maling}Xp*`)
                       }
@@ -2540,7 +2552,7 @@ client.on('group-participants-update', async (anu) => {
                       addLevelingLevel(sender, 99)
                       reply(`karena anda owner kami dari team bot mengirim ${one}Xp untuk anda`)
                       }else{
-                      const mining = Math.ceil(Math.random() * 10000)
+                      const nguli = Math.ceil(Math.random() * 10000)
                       addLevelingXp(sender, nguli)
                       await reply(`*selamat* ${pushname} kamu mendapatkan *${nguli}Xp*`)
                       }
