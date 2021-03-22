@@ -474,6 +474,22 @@ client.on('group-participants-update', async (anu) => {
 	        const magw = fs.readFileSync('./src/webp/aqua.webp');
             client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
 	        }
+		if (auto.match('majikayo')){
+	        const magw = fs.readFileSync('./src/webp/majikayo.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }
+		if (auto.match('hai')){
+	        const magw = fs.readFileSync('./src/webp/hai.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }
+		if (auto.match('tolol')){
+	        const magw = fs.readFileSync('./src/webp/tolol.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }
+		if (auto.match('gk')){
+	        const magw = fs.readFileSync('./src/webp/tolol.webp');
+            client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
+	        }	
 		if (auto.match('bot')){
 	        const magw = fs.readFileSync('./src/webp/aqua.webp');
             client.sendMessage(from, magw, MessageType.sticker, { quoted: mek })
